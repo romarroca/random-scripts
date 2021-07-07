@@ -2,10 +2,6 @@
 
 [ $# -eq 0 ] && { echo "Usage: ./nightmare-scanner.sh 10.1.1.0/24"; exit 1; }
 
-# echo "Usage: ./nightmare-scanner.sh 10.1.1.0/24"
-# echo ""
-# echo ""
-# echo "Enter subnet to scan: "
 
 base=${1%/*}
 masksize=${1#*/}
@@ -30,7 +26,3 @@ seq $ipstart $ipend | while read i; do
       echo $a.$(( ($i & 0xFF0000) >> 16 )).$(( ($i & 0xFF00) >> 8 )).$(( $i & 0x00FF ))  "not vulnerable"
     fi
 done
-
-
-# domain=$1
-# [ $# -eq 0 ] && { echo "Usage: $0 domain_name"; exit 1; }
