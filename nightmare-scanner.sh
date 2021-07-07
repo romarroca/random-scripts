@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+echo "Usage: ./nightmare-scanner.sh 10.1.1.0/24"
+
 base=${1%/*}
 masksize=${1#*/}
 
@@ -23,14 +25,3 @@ seq $ipstart $ipend | while read i; do
       echo $a.$(( ($i & 0xFF0000) >> 16 )).$(( ($i & 0xFF00) >> 8 )).$(( $i & 0x00FF ))  "not vulnerable"
     fi
 done
-
-# for i in $(seq 1 $NUM); do
-#     if OUTPUT=$(rpcdump.py $IP | grep MS-RPRN)
-#       then
-#         echo $IP  "might be vulnerable"
-#         echo $IP >> report.csv
-#     else
-#       echo $IP  "not vulnerable"
-#     fi
-#     IP=$(nextip $IP)
-# done
