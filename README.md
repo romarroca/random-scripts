@@ -15,10 +15,8 @@ NOTE: Use at your own risk as this was only tested on a lab environment
 this requires impacket library rpcdump.py installed in your machine
 
 credits to owner rpcdump.py
-
-# Author:
-#  Javier Kohen <jkohen@coresecurity.com>
-#  Alberto Solino <beto@coresecurity.com>
-
+Author:
+Javier Kohen <jkohen@coresecurity.com>
+Alberto Solino <beto@coresecurity.com>
 
 ----
